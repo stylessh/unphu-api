@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="card card-body col-md-4 h-10 text-center">
+        <h2>Create a book</h2>
+        <form action="/api/books/add" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <div class="custom-file">
+                    <input type="file" name="image" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose an image!</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="title" class="form-control" placeholder="Title">
+            </div>
+
+            <div class="form-group">
+                <textarea rows="7" name="description" class="form-control" placeholder="Description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="author" class="form-control" placeholder="Author">
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary btn-block">
+                Create
+            </button>
+        </form>
+    </div>
+
+    <div class="card col-md-4 offset-md-4 text-center">
+
+        <h2 class="p-4">Most liked books</h2>
+
+
+        <div class="card-body">
+            <div class="row">
+                {{#each books}}
+                <div class="col-md-6 my-2">
+                    <a href="/api/books/view/{{_id}}">
+                        <img src="/public/uploads/{{imageName}}" alt="Book-Img" class="img-thumbnail"
+                            style="min-height: 200px;">
+                    </a>
+                </div>
+                {{else}}
+                <div class="col-md-6 m-auto">
+                    <p class="text-muted">There are not popular books yet...</p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -15,7 +15,7 @@ To view the api in the the development server run the command `yarn run dev`.
 
 The source code was wrote in **ES6**.
 
-If you want the api in mode production, you need to compile the source code with `yarn run build`. And then run `yarn start` to initialize the server.
+If you want the api in mode production, run `yarn start` to initialize the server.
 
 # Database
 
