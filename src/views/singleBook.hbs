@@ -1,0 +1,30 @@
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="/public/uploads/{{book.imageName}}" class="card-img" alt="Book-Img">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{book.title}} - {{book.author}}</h5>
+                <p class="card-text">{{book.description}}</p>
+            </div>
+
+            <div class="card-footer">
+                <div class="row text-center">
+                    <div class="col-md-6">
+                        <p class="badge badge-success p-2 my-2 likes-count d-block">{{book.likes}}</p>
+                        <button class="btn btn-block btn-outline-success" id="btn-like" data-id="{{book._id}}">
+                            <i class="far fa-thumbs-up"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="badge badge-danger p-2 my-2 dislikes-count d-block">{{book.dislikes}}</p>
+                        <button class="btn btn-block btn-outline-danger" id="btn-dislike" data-id="{{book._id}}">
+                            <i class="far fa-thumbs-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
