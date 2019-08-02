@@ -19,7 +19,7 @@ If you want the api in mode production, run `yarn start` to initialize the serve
 
 # Database
 
-You need to connect a **MongoDB Database** with the app.
+You can change the **MongoDB URL** if you want to have a custom database.
 
 > Go to the **.env** file and write the *MONGODB_URI* there.
 
